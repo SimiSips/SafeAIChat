@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Exclude chat history for privacy -->
+        <exclude domain="sharedpref" path="chat_history.xml"/>
+    </cloud-backup>
+</data-extraction-rules>
