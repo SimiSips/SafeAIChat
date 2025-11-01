@@ -122,6 +122,15 @@ class GeminiNanoService(private val context: Context) {
         val lowerPrompt = prompt.lowercase()
 
         return when {
+            lowerPrompt.contains("devfest") || lowerPrompt.contains("gdg") ->
+                "GDG DevFest 2025 is happening right now in Johannesburg at The Tryst, Sandton! DevFest is Google's annual community-led developer festival, bringing together developers to learn about the latest Google technologies, share knowledge, and network with the local tech community."
+
+            lowerPrompt.contains("johannesburg") || lowerPrompt.contains("sandton") || lowerPrompt.contains("tryst") ->
+                "We're at The Tryst in Sandton for GDG DevFest 2025! It's an amazing venue for learning about cutting-edge technologies like on-device AI, Android development, and Google Cloud. Are you attending today?"
+
+            lowerPrompt.contains("event") || lowerPrompt.contains("conference") ->
+                "This demo is being presented at GDG DevFest 2025 in Johannesburg! DevFest brings together developers from across the region to explore the latest in Google technologies, including exciting innovations like Gemini Nano that I'm powered by."
+
             lowerPrompt.contains("hello") || lowerPrompt.contains("hi") ->
                 "Hello! I'm running entirely on your device using Gemini Nano. Your data never leaves your phone. How can I help you today?"
 
